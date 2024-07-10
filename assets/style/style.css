@@ -1,3 +1,4 @@
+/* slick css used in homepage , single products page */
 .slick-prev:before {
   content: url(/assets/images/png&jpg/left-arrow.png) !important;
 }
@@ -17,7 +18,6 @@
 .slick-slide {
   height: auto !important;
 }
-
 .slick-track {
   display: flex !important;
   flex-direction: row !important;
@@ -25,10 +25,17 @@
   align-items: stretch !important;
 }
 
+.slider-nav .slick-disabled,
 .category-items .slick-disabled {
   display: none !important;
 }
 
+@media (max-width: 992px) {
+  .slider-nav .slick-arrow,
+  .slick-arrow {
+    transform: translate(0,-50%)scale(0.6) !important;
+  }
+}
 .slick-arrow {
   background: rgb(246, 246, 246) !important;
   height: 40px !important;
@@ -39,4 +46,19 @@
   border-radius: 50% !important;
   box-shadow: 0px 0px 4px gray !important;
   z-index: 99 !important;
+}
+/* tabs in category page */
+#default-tab button[aria-selected="false"] {
+  border-left-color: transparent !important;
+}
+.slick-next {
+  right: -12px !important;
+}
+.slick-prev {
+  left: -12px !important;
+}
+
+#default-tab button[aria-selected="true"] {
+  border-left-color: #2ead56;
+  background-color: rgb(94 171 86 / 0.15);
 }

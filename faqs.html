@@ -1,0 +1,725 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corner Pantry Co. - Your Ultimate Product Delivery App</title>
+    <meta name="description"
+        content="Corner Pantry Co. offers fast and reliable product delivery services. Get groceries, essentials, and more delivered to your doorstep.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/png&jpg/fav-icon.svg" type="image/x-icon">
+
+    <!-- Web App Meta Tags -->
+    <meta name="theme-color" content="#4CAF50">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Corner Pantry Co.">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+
+    <!-- Additional Meta Tags -->
+    <link rel="canonical" href="http://127.0.0.1:5500/faqs.html">
+
+    <!-- Custom Scripts and Styles -->
+    <script src="assets/js/tailwind.local.js"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="assets/style/style.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- jQuery CDNs -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+
+    <!-- Flowbite CDN for Third-Party Actions -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+
+    <!-- internal styling -->
+    <style>
+        .accordion-nested-parent button {
+            background: transparent;
+            color: #2d2926;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- hero & navbar -->
+    <div class="tem-box"></div>
+    <header class="bg-[#fcfcfc] fixed top-0 z-[9999] w-full">
+        <nav class="md:flex items-center justify-between md:max-lg:gap-x-4 gap-x-8 border-b border-moreLighter"
+            aria-label="Global">
+            <div class="hidden md:flex border-r border-moreLighter px-6 py-2">
+                <a href="/" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+
+                    <img src="assets/images/png&jpg/Logo-cpc.png" alt="corner pantry co.'s logo in green colour"
+                        class="w-full object-contain max-w-[90px]">
+                </a>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4 lg:flex-1 lg:gap-x-12 relative px-4 max-md:p-4">
+                <div class="flex items-center justify-between">
+                    <fieldset>
+                        <input id="draft" class="peer/draft hidden" type="checkbox" name="status" />
+                        <label for="draft" class="block max-w-56 cursor-pointer">
+                            <h4 class="font-bold text-lg textlight-brown/75 text-nowrap">Delivery in 17 minutes</h4>
+                            <h5
+                                class="font-normal text-xsm md:text-xsm textlight-brown truncate max-w-[186px] pr-3 relative">
+                                WV52+XH5, Karimpura, Ludhiana,
+                                Punjab
+                                141008, India
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 6 8"
+                                    class="absolute top-1/2 -translate-y-1/2 right-0 rotate-90" fill="none">
+                                    <path d="M0 8V0L6 4L0 8Z" fill="black" />
+                                </svg>
+                            </h5>
+                        </label>
+                        <!-- shows choose location on desktop screens -->
+                        <div
+                            class="hidden peer-checked/draft:block absolute top-0 z-[99999] -translate-y-[-76px] lg:-translate-y-[-80px] left-0  p-4 max-md:w-full max-w-[800px] duration-200">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-sans font-bold text-sm md:text-md textlight-brown">Change Location</h4>
+
+                                <label for="draft" class="block max-w-56 cursor-pointer">
+                                    <img src="assets/images/png&jpg/cross-icon.png"
+                                        alt="cross icon for hide location popup"
+                                        class="w-full object-contain max-w-[14px]">
+                                </label>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row items-center gap-4 lg:gap-6 mt-4">
+                                <button
+                                    class="rounded-md bg-greeny px-3 py-2 text-sm md:text-xsm capitalize font-bold text-white hover:text-greeny hover:bg-transparent border-2 border-greeny flex items-center gap-3 duration-200 inline-block text-nowrap">
+                                    Detect my location
+                                </button>
+                                <!-- Or element -->
+                                <div
+                                    class="w-8 h-8 rounded-full  border-2 border-gray-300 flex items-center justify-center before:absolute before:left-[-11px] before:w-3 before:h-1 before:border before: after:absolute after:right-[-11px] after:w-3 after:h-1 after:border after: after: relative">
+                                    <span
+                                        class="font-sans font-normal text-xsm md:text-xsm text-light-brown/[0.6] capitalize">or</span>
+                                </div>
+
+                                <!-- manually search input -->
+                                <form action="" class="max-md:w-full">
+                                    <input type="search" placeholder="search delivery location" name="search"
+                                        id="location-search"
+                                        class="bg-[#f8f8f8] block w-full h-full rounded-xl text-light-brown border border-gray-200 focus:outline-0 placeholder:text-light-brown/[0.6] sm:text-sm font-light p-3 md:min-w-72">
+                                </form>
+
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="w-8 cursor-pointer md:hidden">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16 5.33317C10.1089 5.33317 5.33329 10.1088 5.33329 15.9998C5.33329 21.8909 10.1089 26.6665 16 26.6665C21.891 26.6665 26.6666 21.8909 26.6666 15.9998C26.6666 10.1088 21.891 5.33317 16 5.33317ZM2.66663 15.9998C2.66663 8.63604 8.63616 2.6665 16 2.6665C23.3638 2.6665 29.3333 8.63604 29.3333 15.9998C29.3333 23.3636 23.3638 29.3332 16 29.3332C8.63616 29.3332 2.66663 23.3636 2.66663 15.9998Z"
+                                fill="black"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16 10.6667C14.5272 10.6667 13.3333 11.8606 13.3333 13.3333C13.3333 14.8061 14.5272 16 16 16C17.4727 16 18.6666 14.8061 18.6666 13.3333C18.6666 11.8606 17.4727 10.6667 16 10.6667ZM10.6666 13.3333C10.6666 10.3878 13.0544 8 16 8C18.9455 8 21.3333 10.3878 21.3333 13.3333C21.3333 16.2789 18.9455 18.6667 16 18.6667C13.0544 18.6667 10.6666 16.2789 10.6666 13.3333Z"
+                                fill="black"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.2674 23.2783C10.3653 23.6502 9.8256 24.2056 9.46237 25.1467C9.19724 25.8337 8.42539 26.1757 7.73839 25.9106C7.0514 25.6454 6.70941 24.8736 6.97455 24.1866C7.59355 22.5827 8.65364 21.4714 10.2512 20.8129C11.7534 20.1936 13.6722 20 15.9998 20C18.3392 20 20.2689 20.1812 21.775 20.7938C23.3847 21.4487 24.4443 22.5677 25.0551 24.1993C25.3132 24.8889 24.9634 25.6572 24.2737 25.9154C23.5841 26.1735 22.8157 25.8237 22.5576 25.1341C22.199 24.176 21.666 23.6284 20.7702 23.2639C19.7707 22.8573 18.2817 22.6667 15.9998 22.6667C13.7457 22.6667 12.2649 22.8671 11.2674 23.2783Z"
+                                fill="black"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="w-full relative">
+                    <form action="" class="h-full">
+                        <input type="search" name="search" id="search"
+                            class="bg-[#f8f8f8] block w-full h-full rounded-xl text-light-brown border border-gray-200 focus:outline-0 placeholder:text-light-brown/[0.6] sm:text-sm font-light sm:leading-6 p-4 pl-10"
+                            placeholder="Search &#8243;curd&#8243;">
+                        <button type="submit" class="absolute top-1/2 -translate-y-1/2 left-[12px] inline-block">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            </div>
+            <div class="hidden md:flex items-center justify-end gap-x-12 px-3 lg:px-8">
+                <a href="#"
+                    class="hidden lg:block text-sm md:text-lg lg:font-normal lg:leading-6 text-light-brown/[0.7] hover:text-greeny capitalize">Login</a>
+                <button
+                    class="rounded-md bg-greeny px-3 py-2 text-xsm md:text-xsm capitalize font-bold text-white hover:text-greeny hover:bg-transparent border-2 border-greeny flex items-center gap-3 duration-200 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 31" fill="none">
+                        <path d="M6 6H30L27 19H9M27 23H10L5 2H2" stroke="none"
+                            class="stroke-white group-hover:stroke-greeny" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M25 29C26.1046 29 27 28.1046 27 27C27 25.8954 26.1046 25 25 25C23.8954 25 23 25.8954 23 27C23 28.1046 23.8954 29 25 29Z"
+                            stroke="none" class="stroke-white group-hover:stroke-greeny" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M12 29C13.1046 29 14 28.1046 14 27C14 25.8954 13.1046 25 12 25C10.8954 25 10 25.8954 10 27C10 28.1046 10.8954 29 12 29Z"
+                            stroke="none" class="stroke-white group-hover:stroke-greeny" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    my cart
+                    <!-- after items in cart (total items and total price) -->
+                    <!-- <span class="flex flex-col">
+                       1 items
+                       <span>₹20</span>
+                   </span> -->
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Frequently asked questions -->
+    <section class="bg-lightest-gray py-8 md:py-16 border-b">
+        <div class="max-w-[960px] mx-auto px-3">
+            <h1 class="font-sans font-medium text-xl md:text-2xl md:text-bigger text-light-brown">Frequently asked
+                questions</h1>
+
+            <div id="accordion-nested-parent" data-accordion="collapse"
+                class="mt-4 md:mt-12 xl:mt-20 accordion-nested-parent space-y-4">
+                <div class="border rounded-xl px-3 md:px-6">
+                    <h2 id="accordion-collapse-heading-1">
+                        <button type="button"
+                            class="flex items-center justify-between w-full py-4 md:py-6 xl:py-10 font-sans font-bold text-light-brown text-lg md:text-midbig gap-3"
+                            data-accordion-target="#accordion-collapse-body-1" aria-expanded="false"
+                            aria-controls="accordion-collapse-body-1">
+                            <span>General</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                        <div class="border-t">
+                            <!-- Nested accordion -->
+                            <div id="accordion-nested-collapse" data-accordion="collapse">
+                                <div class="border-b border-light-brown/10">
+                                    <h2 id="accordion-nested-collapse-heading-1">
+                                        <button type="button"
+                                            class="flex items-center justify-between text-left w-full py-3 md:py-5 md:pr-10 font-sans font-bold text-light-brown text-sm md:text-lg gap-3"
+                                            data-accordion-target="#accordion-nested-collapse-body-1"
+                                            aria-expanded="false" aria-controls="accordion-nested-collapse-body-1">
+                                            <span>What is corner pantry co. and why was the name changed?</span>
+                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0"
+                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="accordion-nested-collapse-body-1" class="hidden"
+                                        aria-labelledby="accordion-nested-collapse-heading-1">
+                                        <div class="pb-5 space-y-2">
+                                            <p class="font-sans font-medium text-light-brown text-sm md:text-md">corner
+                                                pantry co.
+                                                is
+                                                leading
+                                                the
+                                                charge in transforming India’s vast, unorganised grocery landscape
+                                                through
+                                                cutting-edge technology and innovation. corner pantry co. is India’s
+                                                largest and
+                                                most
+                                                convenient hyper-local delivery company, which enables you to order
+                                                grocery,
+                                                fruits & vegetables, and other daily essential products, directly via
+                                                your
+                                                mobile or web browser.</p>
+                                            <p class="font-sans font-medium text-light-brown text-sm md:text-md">To know
+                                                the
+                                                reason
+                                                why
+                                                we changed our brand name from Grofers to corner pantry co., read this
+                                                <a href="#" class="font-bold">blog post</a>. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-b border-light-brown/10 last:border-0">
+                                    <h2 id="accordion-nested-collapse-heading-2">
+                                        <button type="button"
+                                            class="flex items-center justify-between text-left w-full py-3 md:py-5 md:pr-10 font-sans font-bold text-light-brown text-sm md:text-lg gap-3"
+                                            data-accordion-target="#accordion-nested-collapse-body-2"
+                                            aria-expanded="false" aria-controls="accordion-nested-collapse-body-2">
+                                            <span>Architecture</span>
+                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0"
+                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="accordion-nested-collapse-body-2" class="hidden"
+                                        aria-labelledby="accordion-nested-collapse-heading-2">
+                                        <div class="pb-5 space-y-2">
+                                            <p class="font-sans font-medium text-light-brown text-sm md:text-md">corner
+                                                pantry co.
+                                                is
+                                                leading
+                                                the
+                                                charge in transforming India’s vast, unorganised grocery landscape
+                                                through
+                                                cutting-edge technology and innovation. corner pantry co. is India’s
+                                                largest and
+                                                most
+                                                convenient hyper-local delivery company, which enables you to order
+                                                grocery,
+                                                fruits & vegetables, and other daily essential products, directly via
+                                                your
+                                                mobile or web browser.</p>
+                                            <p class="font-sans font-medium text-light-brown text-sm md:text-md">To know
+                                                the
+                                                reason
+                                                why
+                                                we changed our brand name from Grofers to corner pantry co., read this
+                                                <a href="#" class="font-bold">blog post</a>. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End: Nested accordion -->
+                        </div>
+                    </div>
+                </div>
+                <div class="border rounded-xl px-3 md:px-6">
+                    <h2 id="accordion-collapse-heading-2">
+                        <button type="button"
+                            class="flex items-center justify-between w-full py-4 md:py-6 xl:py-10 font-sans font-bold text-light-brown text-lg md:text-midbig gap-3"
+                            data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                            aria-controls="accordion-collapse-body-2">
+                            <span>Details</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                        <div class="border-t">
+                            <!-- Nested accordion -->
+                            <div id="accordion-nested-collapse-2" data-accordion="collapse">
+                                <div class="border-b border-light-brown/10">
+                                    <h2 id="accordion-nested-collapse-heading-3">
+                                        <button type="button"
+                                            class="flex items-center justify-between text-left w-full py-3 md:py-5 md:pr-10 font-sans font-bold text-light-brown text-sm md:text-lg gap-3"
+                                            data-accordion-target="#accordion-nested-collapse-body-3"
+                                            aria-expanded="false" aria-controls="accordion-nested-collapse-body-3">
+                                            <span>What is corner pantry co. and why was the name changed?</span>
+                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0"
+                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="accordion-nested-collapse-body-3" class="hidden"
+                                        aria-labelledby="accordion-nested-collapse-heading-3">
+                                        <div class="pb-5 space-y-2">
+                                            <p class="font-sans font-medium text-light-brown text-sm md:text-md">corner
+                                                pantry co.
+                                                is
+                                                leading
+                                                the
+                                                charge in transforming India’s vast, unorganised grocery landscape
+                                                through
+                                                cutting-edge technology and innovation. corner pantry co. is India’s
+                                                largest and
+                                                most
+                                                convenient hyper-local delivery company, which enables you to order
+                                                grocery,
+                                                fruits & vegetables, and other daily essential products, directly via
+                                                your
+                                                mobile or web browser.</p>
+                                            <p class="font-sans font-medium text-light-brown text-sm md:text-md">To know
+                                                the
+                                                reason
+                                                why
+                                                we changed our brand name from Grofers to corner pantry co., read this
+                                                <a href="#" class="font-bold">blog post</a>. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-b border-light-brown/10 last:border-0">
+                                    <h2 id="accordion-nested-collapse-heading-4">
+                                        <button type="button"
+                                            class="flex items-center justify-between text-left w-full py-3 md:py-5 md:pr-10 font-sans font-bold text-light-brown text-sm md:text-lg gap-3"
+                                            data-accordion-target="#accordion-nested-collapse-body-4"
+                                            aria-expanded="false" aria-controls="accordion-nested-collapse-body-4">
+                                            <span>Architecture</span>
+                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0"
+                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="accordion-nested-collapse-body-4" class="hidden"
+                                        aria-labelledby="accordion-nested-collapse-heading-4">
+                                        <div class="pb-5 space-y-2">
+                                            <p class="font-sans font-medium text-light-brown text-sm md:text-md">corner
+                                                pantry co.
+                                                is
+                                                leading
+                                                the
+                                                charge in transforming India’s vast, unorganised grocery landscape
+                                                through
+                                                cutting-edge technology and innovation. corner pantry co. is India’s
+                                                largest and
+                                                most
+                                                convenient hyper-local delivery company, which enables you to order
+                                                grocery,
+                                                fruits & vegetables, and other daily essential products, directly via
+                                                your
+                                                mobile or web browser.</p>
+                                            <p class="font-sans font-medium text-light-brown text-sm md:text-md">To know
+                                                the
+                                                reason
+                                                why
+                                                we changed our brand name from Grofers to corner pantry co., read this
+                                                <a href="#" class="font-bold">blog post</a>. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- more bottom content -->
+    <section class="py-8 md:py-16">
+        <div class="max-w-[960px] mx-auto px-3 space-y-8">
+            <div class="space-y-3">
+                <p class="font-sans font-medium text-sm text-light-brown">#1 instant delivery service in India</p>
+                <span class="font-sans font-normal text-sm text-light-brown/75 inline-block">Shop on the go and get
+                    anything delivered in minutes. Buy everything from groceries to fresh fruits & vegetables, cakes and
+                    bakery items, to meats & seafood, cosmetics, mobiles & accessories, electronics, baby care products
+                    and much more. We get it delivered at your doorstep in the fastest and the safest way
+                    possible.</span>
+            </div>
+            <div class="space-y-3">
+                <p class="font-sans font-medium text-sm text-light-brown">single app for all your daily needs</p>
+                <span class="font-sans font-normal text-sm text-light-brown/75 inline-block">Order thousands of products
+                    at just a tap - milk, eggs, bread, cooking oil, ghee, atta, rice, fresh fruits & vegetables, spices,
+                    chocolates, chips, biscuits, Maggi, cold drinks, shampoos, soaps, body wash, pet food, diapers,
+                    electronics, other organic and gourmet products from your neighbourhood stores and a lot
+                    more.</span>
+            </div>
+            <div class="space-y-3">
+                <p class="font-sans font-medium text-sm text-light-brown">order online on corner pantry co. to enjoy
+                    instant
+                    delivery magic</p>
+                <span class="font-sans font-normal text-sm text-light-brown/75 inline-block">Cities we currently serve:
+                    Agra, Ahmedabad, Bengaluru, Bhopal, Chandigarh, Chennai, Dehradun, Delhi, Faridabad, Goa, Gurgaon,
+                    Indore, Hyderabad, Jaipur, Jalandhar, Kanpur, Kolkata, Lucknow, Ludhiana, Meerut, Mohali, Mumbai,
+                    Panchkula, Pune, UP-NCR, Vadodara, Zirakpur.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer last section  -->
+    <footer aria-readonly="true" class="bg-white">
+        <div class="max-w-[1296px] px-3 mx-auto pt-12 pb-4">
+            <div class="grid lg:grid-cols-3 gap-10">
+                <!-- Useful Links -->
+                <div>
+                    <h4 class="font-sans font-semibold text-xl textlight-brown">Useful Links</h4>
+
+                    <div class="grid grid-cols-3 gap-3 mt-4 md:mt-8">
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#About"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">About</a>
+                            </li>
+                            <li>
+                                <a href="#Careers"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Careers</a>
+                            </li>
+                            <li>
+                                <a href="#blogs"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#Press"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Press</a>
+                            </li>
+                            <li>
+                                <a href="#Lead"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Lead</a>
+                            </li>
+                            <li>
+                                <a href="#Value"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Value</a>
+                            </li>
+                        </ul>
+
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#About"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="#Careers"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Terms</a>
+                            </li>
+                            <li>
+                                <a href="faqs.html"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#Press"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Security</a>
+                            </li>
+                            <li>
+                                <a href="#Lead"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Mobile</a>
+                            </li>
+                            <li>
+                                <a href="#Value"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Contact</a>
+                            </li>
+                        </ul>
+
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#Partner"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Partner</a>
+                            </li>
+                            <li>
+                                <a href="#Express"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Express</a>
+                            </li>
+                            <li>
+                                <a href="#Seller"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Seller</a>
+                            </li>
+                            <li>
+                                <a href="#Warehouse"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Warehouse</a>
+                            </li>
+                            <li>
+                                <a href="#Deliver"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Deliver</a>
+                            </li>
+                            <li>
+                                <a href="#Resources"
+                                    class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Resources</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Useful Links -->
+                <div class="lg:col-span-2 2xl:pl-20">
+                    <h4 class="font-sans font-semibold text-xl textlight-brown">Categories
+                        <a href="#seeall" class="font-sans font-normal text-lg md:text-xl text-greeny/[0.8] ml-3">see
+                            all</a>
+                    </h4>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4 md:mt-8">
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Vegetables
+                            & Fruits</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Cold
+                            Drinks & Juices</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Bakery
+                            &
+                            Biscuits</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Dry
+                            Fruits, Masala & Oil</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Paan
+                            Corner</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Pharma
+                            &
+                            Wellness</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Ice
+                            Creams
+                            & Frozen Desserts</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Beauty
+                            &
+                            Cosmetics</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Dairy
+                            &
+                            Breakfast</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Instant
+                            &
+                            Frozen Food</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Sweet
+                            Tooth</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Sauces
+                            &
+                            Spreads</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Organic
+                            &
+                            Premium</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Cleaning
+                            Essentials</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Personal
+                            Care</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Toys
+                            &
+                            Games</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Munchies</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Tea,
+                            Coffee & Health Drinks</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Atta,
+                            Rice
+                            & Dal</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Chicken,
+                            Meat & Fish</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Baby
+                            Care</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Home
+                            &
+                            Office</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">pet</a>
+                        <a href="productcategory.html"
+                            class="font-sans font-normal text-sm md:text-md text-light-brown/[0.7] hover:text-greeny capitalize w-fit">Print
+                            Store</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#fcfcfc]">
+            <div class="max-w-[1296px] px-3 mx-auto py-12 lg:pb-4">
+                <div class="grid lg:grid-cols-3 gap-6 flex-wrap">
+                    <p
+                        class="font-sans font-normal text-xsm md:text-sm text-light-brown/[0.7] capitalize md:text-center">
+                        © Blink Commerce Private Limited (formerly known as Grofers India Private Limited), 2016-2024
+                    </p>
+
+                    <div class="flex flex-col lg:flex-row items-center justify-center gap-3">
+                        <p class="font-sans font-bold text-sm capitalize text-light-brown/[0.7]">
+                            Download App
+                        </p>
+
+                        <div class="flex items-center justify-center gap-3">
+                            <img width="100" height="100" loading="lazy" src="assets/images/png&jpg/appstore-image.webp"
+                                alt="appstore-image" class="w-full object-contain max-w-[92px] block">
+                            <img width="100" height="100" loading="lazy"
+                                src="assets/images/png&jpg/googleplayestore-image.webp" alt="appstore-image"
+                                class="w-full object-contain max-w-[92px] block">
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center lg:justify-end gap-4 md:gap-8">
+                        <a href="#facebook" class="w-[40px] h-[40px]">
+                            <svg width="40" height="40" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="100" rx="50" fill="white"></rect>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M42.9417 77.2H54.1817V49.9967H61.68L62.6733 40.6233H54.1817L54.1933 35.93C54.1933 33.4867 54.4267 32.175 57.9333 32.175H62.62V22.8H55.12C46.1117 22.8 42.9417 27.3483 42.9417 34.995V40.6233H37.3267V49.9983H42.9417V77.2V77.2ZM50 100C22.3867 100 0 77.6133 0 50C0 22.385 22.3867 0 50 0C77.6133 0 100 22.385 100 50C100 77.6133 77.6133 100 50 100Z"
+                                    fill="#1F1F1F"></path>
+                            </svg>
+                        </a>
+                        <a href="#twitter" class="w-[40px] h-[40px]">
+                            <svg width="40" height="40" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="100" rx="50" fill="#1F1F1F"></rect>
+                                <path
+                                    d="M75 34.6178C73.4015 35.5058 71.4479 36.0386 69.6718 36.2162C71.6255 34.973 73.0463 33.0193 73.7568 30.7104C71.9807 31.7761 70.027 32.6641 67.7181 33.1969C65.9421 31.2432 63.6332 30 60.9691 30C55.8185 30 51.556 34.4402 51.556 40.1236C51.556 40.834 51.556 41.722 51.7336 42.4324C43.9189 42.0772 36.9923 37.9923 32.3745 31.9537C31.4865 33.3745 31.1313 35.1506 31.1313 37.1042C31.1313 40.6564 32.7297 43.6757 35.2162 45.4517C33.6178 45.4517 32.1969 44.9189 30.9537 44.2085V44.3861C30.9537 49.1815 34.1506 53.2664 38.4131 54.332C37.7027 54.5097 36.8147 54.6873 35.9266 54.6873C35.3938 54.6873 34.6834 54.6873 34.1506 54.5097C35.3938 58.5946 38.7683 61.4363 42.8533 61.4363C39.6564 64.1004 35.5714 65.6988 31.3089 65.6988C30.5985 65.6988 29.888 65.6988 29 65.5212C33.0849 68.3629 38.0579 70.139 43.3861 70.139C60.6139 70.139 70.027 54.8649 70.027 41.5444C70.027 41.1892 70.027 40.6564 70.027 40.3012C72.1583 38.5251 73.7568 36.749 75 34.6178Z"
+                                    fill="white"></path>
+                            </svg>
+                        </a>
+                        <a href="#instagram" class="w-[40px] h-[40px]">
+                            <svg width="40" height="40" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_6973_248115)">
+                                    <rect width="100" height="100" rx="50" fill="white"></rect>
+                                    <path
+                                        d="M49.5935 59.3496C54.5326 59.3496 58.5366 55.3456 58.5366 50.4065C58.5366 45.4674 54.5326 41.4634 49.5935 41.4634C44.6544 41.4634 40.6504 45.4674 40.6504 50.4065C40.6504 55.3456 44.6544 59.3496 49.5935 59.3496Z"
+                                        fill="#1F1F1F"></path>
+                                    <path
+                                        d="M60.7724 28.4553H38.4146C35.1626 28.4553 32.3171 29.4716 30.4878 31.3008C28.6585 33.1301 27.6423 35.9756 27.6423 39.2276V61.5854C27.6423 64.8374 28.6585 67.6829 30.6911 69.7155C32.7236 71.5447 35.3659 72.561 38.6179 72.561H60.7724C64.0244 72.561 66.8699 71.5447 68.6992 69.7155C70.7317 67.8862 71.748 65.0407 71.748 61.7886V39.4309C71.748 36.1789 70.7317 33.5366 68.9024 31.5041C66.8699 29.4716 64.2276 28.4553 60.7724 28.4553ZM49.5935 64.2276C41.8699 64.2276 35.7724 57.9268 35.7724 50.4065C35.7724 42.6829 42.0732 36.5854 49.5935 36.5854C57.1138 36.5854 63.6179 42.6829 63.6179 50.4065C63.6179 58.1301 57.3171 64.2276 49.5935 64.2276ZM64.0244 39.2276C62.1951 39.2276 60.7724 37.8049 60.7724 35.9756C60.7724 34.1463 62.1951 32.7236 64.0244 32.7236C65.8537 32.7236 67.2764 34.1463 67.2764 35.9756C67.2764 37.8049 65.8537 39.2276 64.0244 39.2276Z"
+                                        fill="#1F1F1F"></path>
+                                    <path
+                                        d="M50 0C22.3577 0 0 22.3577 0 50C0 77.6423 22.3577 100 50 100C77.6423 100 100 77.6423 100 50C100.203 22.3577 77.6423 0 50 0ZM76.626 61.7886C76.626 66.4634 75 70.5285 72.1545 73.374C69.3089 76.2195 65.2439 77.6423 60.7724 77.6423H38.6179C34.1463 77.6423 30.0813 76.2195 27.2358 73.374C24.187 70.5285 22.7642 66.4634 22.7642 61.7886V39.4309C22.7642 30.0813 29.065 23.5772 38.6179 23.5772H60.9756C65.6504 23.5772 69.5122 25.2033 72.3577 28.0488C75.2032 30.8943 76.626 34.7561 76.626 39.4309V61.7886V61.7886Z"
+                                        fill="#1F1F1F"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_6973_248115">
+                                        <rect width="100" height="100" rx="50" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a href="#linkedin" class="w-[40px] h-[40px]">
+                            <svg width="40" height="40" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="100" rx="50" fill="#1F1F1F"></rect>
+                                <path d="M38.5 37.5H28V72H38.5V37.5Z" fill="white"></path>
+                                <path
+                                    d="M64.0045 37.5C58 37.5 56.335 39.468 55 42V37.5H44.5V72H55V52.5C55 49.5 55 46.5 60.25 46.5C65.5 46.5 65.5 49.5 65.5 52.5V72H76V52.5C76 43.5 74.5 37.5 64.0045 37.5Z"
+                                    fill="white"></path>
+                                <path
+                                    d="M33.25 34.5C36.1495 34.5 38.5 32.1495 38.5 29.25C38.5 26.3505 36.1495 24 33.25 24C30.3505 24 28 26.3505 28 29.25C28 32.1495 30.3505 34.5 33.25 34.5Z"
+                                    fill="white"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-[40px] h-[40px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                fill="none">
+                                <rect width="40" height="40" rx="20" fill="#1F1F1F" />
+                                <path
+                                    d="M19.5849 13.5658C21.4171 13.5658 23.1436 14.3419 24.4088 15.5551V15.5587C24.4088 14.9761 24.819 14.5354 25.386 14.5354H25.53C26.4247 14.5354 26.604 15.3416 26.604 15.596L26.6077 24.6503C26.5455 25.2437 27.2489 25.5504 27.6397 25.1691C29.1584 23.6765 30.9786 17.4878 26.694 13.9048C22.6981 10.5604 17.335 11.1129 14.4836 12.9904C11.4529 14.9912 9.51575 19.4105 11.3974 23.5639C13.4524 28.0922 19.3269 29.443 22.8233 28.0958C24.5933 27.4128 25.4092 29.696 23.5696 30.4434C20.7969 31.5735 13.0699 31.4581 9.46101 25.4866C7.02283 21.4528 7.15183 14.357 13.6211 10.6808C18.5657 7.86663 25.0898 8.6463 29.0226 12.5697C33.1325 16.6752 32.8948 24.3565 28.8824 27.3426C27.0652 28.7006 24.3668 27.3799 24.3863 25.4013L24.366 24.7564C23.1008 25.9538 21.4171 26.6561 19.5849 26.6561C15.9603 26.6561 12.7692 23.6062 12.7692 20.1464C12.7692 16.6494 15.9603 13.5673 19.5849 13.5673V13.5658ZM24.144 19.8963C24.0068 17.3617 22.0381 15.8353 19.6592 15.8353H19.5692C16.8273 15.8353 15.3041 17.8992 15.3041 20.2389C15.3041 22.8624 17.1438 24.5192 19.5579 24.5192C22.2526 24.5192 24.0218 22.6352 24.1508 20.4066L24.144 19.8963Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- description line -->
+                <div class="mt-10">
+                    <p class="font-sans font-normal text-sm lg:text-md text-light-brown/[0.7] capitalize">
+                        “corner pantry co.” is owned & managed by "Blink Commerce Private Limited" (formerly known as
+                        Grofers
+                        India
+                        Private Limited) and is not related, linked or interconnected in whatsoever manner or nature, to
+                        “GROFFR.COM” which is a real estate services business operated by “Redstone Consultancy Services
+                        Private Limited”.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+</body>
+
+</html>

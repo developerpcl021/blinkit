@@ -1,1 +1,1 @@
-# blinkit
+# corner pantry co.
